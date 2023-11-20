@@ -1,0 +1,180 @@
+import React, { useState, useEffect } from "react";
+import { useSelector, useDispatch } from "react-redux";
+import { FaSearch } from "react-icons/fa";
+import RestaurantCard from "./RestaurantCard";
+import Shimmer from "./Shimmer";
+import useOnlineStatus from "../hooks/useOnlineStatus";
+import BestOfferSection from "./Home/BestOfferSection";
+import useRestaurantList from "../hooks/useRestaurantList";
+import Cuisines from "./Home/Cuisines";
+
+const Body = () => {
+  const dispatch = useDispatch();
+  let areaLatLng = useSelector((store) => store.latLng.coordinates); // redux
+  let address = useSelector((store) => store.latLng.address); // redux
+
+  const latlong = {
+    lat: areaLatLng.length > 0 ? areaLatLng[0].lat : 26.8289443,
+    lng: areaLatLng.length > 0 ? areaLatLng[0].lng : 75.8056178,
+  };
+
+  // Local State Variables
+
+  const resInfo = useRestaurantList(latlong);
+  console.log(resInfo, "resInfo in Body");
+  const [listOfRestaurants, setListOfRestaurants] = useState([]);
+  const [listOfFilteredRestaurants, setListOfFilteredRestaurants] = useState(
+    []
+  );
+  const [searchText, setSearchText] = useState("");
+
+  // Fetch data when the component mounts
+  useEffect(() => {
+    if (resInfo) {
+      const restaurant_list = "top_brands_for_you";
+      const restaurantCard = resInfo?.cards.find(
+        (card) => card.card.card.id === restaurant_list
+      );
+      let finalData =
+        restaurantCard?.card?.card?.gridElements.infoWithStyle.restaurants ||
+        [];
+      setListOfRestaurants(finalData);
+      setListOfFilteredRestaurants(finalData);
+    }
+  }, [resInfo]);
+
+  // Function to handle restaurant filtering based on search text
+  const handleSearch = () => {
+    const filteredRestaurants = listOfRestaurants.filter((res) => {
+      const restaurantName = res.info.name.toLowerCase();
+      return restaurantName.includes(searchText.toLowerCase());
+    });
+    setListOfFilteredRestaurants(filteredRestaurants);
+  };
+
+  // Function to handle filtering restaurants with a rating of 4+
+
+  const handleFilters = (type) => {
+    let filteredList = [];
+
+    if (type === "rating4+") {
+      filteredList = listOfRestaurants.filter((res) => res.info.avgRating >= 4);
+    } else if (type === "fast-delivery") {
+      filteredList = listOfRestaurants.slice().sort((a, b) => {
+        const costA = parseInt(a.info.sla.deliveryTime);
+        const costB = parseInt(b.info.sla.deliveryTime);
+        return costA - costB;
+      });
+    } else if (type === "low-high") {
+      filteredList = listOfRestaurants.slice().sort((a, b) => {
+        const costA = parseInt(a.info.costForTwo.replace("₹", ""), 10);
+        const costB = parseInt(b.info.costForTwo.replace("₹", ""), 10);
+        return costA - costB;
+      });
+    } else if (type === "high-low") {
+      filteredList = listOfRestaurants.slice().sort((a, b) => {
+        const costA = parseInt(a.info.costForTwo.replace("₹", ""), 10);
+        const costB = parseInt(b.info.costForTwo.replace("₹", ""), 10);
+        return costB - costA;
+      });
+    }
+    setListOfFilteredRestaurants(filteredList);
+  };
+
+  const onlineStatus = useOnlineStatus(); // check if online status ot Internat Available or NOT
+
+  if (onlineStatus === false)
+    return (
+      <div className="offline-message">
+        <h1>Your internet connection is not available.</h1>
+        <h2>Please check your network connection and try again.</h2>
+      </div>
+    );
+  return (
+    <div className="body">
+      <div className="container">
+        <div className="row">
+          <div className="col-md-12">
+            <BestOfferSection
+              addressText={address.length > 0 ? address[0].main_text : ""}
+            />
+            {/* Best Offer Section */}
+            <Cuisines
+              addressText={address.length > 0 ? address[0].main_text : ""}
+            />
+            {/* Cuisines Section */}
+            <div className="res-header">
+              Restaurants with online food delivery in{" "}
+              {address.length > 0 ? address[0].main_text : ""}!
+            </div>
+            <div className="Search">
+              <div className="example">
+                <input
+                  type="text"
+                  className="search-box"
+                  value={searchText}
+                  placeholder="Search Restaurants..."
+                  onChange={(e) => {
+                    setSearchText(e.target.value);
+                    handleSearch();
+                  }}
+                  required
+                />
+                <button type="submit" className="search-button">
+                  <FaSearch />
+                </button>
+              </div>
+            </div>
+            <div className="filter">
+              <button
+                type="button"
+                className="btn btn-info filter-btn"
+                onClick={() => handleFilters("rating4+")}
+              >
+                Ratings 4.0+
+              </button>
+              <button
+                type="button"
+                className="btn btn-info filter-btn"
+                onClick={() => handleFilters("fast-delivery")}
+              >
+                Fast Delivery
+              </button>
+              <button
+                type="button"
+                className="btn btn-info filter-btn"
+                onClick={() => handleFilters("low-high")}
+              >
+                Cost (Low to High)
+              </button>
+              <button
+                type="button"
+                className="btn btn-info filter-btn"
+                onClick={() => handleFilters("high-low")}
+              >
+                Cost (High to Low)
+              </button>
+            </div>
+            <div className="res-container">
+              {listOfRestaurants.length === 0 ? (
+                <Shimmer /> /* Display a loading shimmer effect while fetching data */
+              ) : (
+                <div className="res-body">
+                  {listOfFilteredRestaurants.map((restaurant) => (
+                    <RestaurantCard
+                      key={restaurant.info.id}
+                      resData={restaurant}
+                    />
+                  ))}
+                </div>
+              )}
+              <div className="res-footer"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Body;

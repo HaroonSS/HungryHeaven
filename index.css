@@ -1,0 +1,2106 @@
+* {
+    font-family: "Mulish", sans-serif;
+    box-sizing: border-box;
+  }
+  .container {
+    max-width: 1400px;
+    min-width: 1400px;
+    /* position: relative; */
+    margin: 0 auto;
+    padding-top: -2px;
+    background: #fff;
+  }
+  
+  
+  .logo-container{
+    display: flex; 
+    align-items: center;
+  }
+  
+  
+  .location-container {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    margin-left: 30px;
+    max-width: 300px;
+    height: 30px;
+    cursor: pointer;
+    margin-bottom: -1px;
+    padding-right: 10px;
+  }
+  
+  .location-title {
+    font-weight: 700;
+    color: #3d4152;
+    float: left;
+  }
+  
+  .location-subtitle {
+    display: block;
+    min-width: 30px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+  
+  .location-title:after {
+    content: "";
+    position: absolute;
+    height: 2px;
+    left: 0;
+    bottom: -5px;
+    width: 100%;
+    background: #3d4152;
+  }
+  
+  .location-address {
+    display: block;
+    padding-left: 5px;
+    margin-left: 5px;
+    color: #686b78;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+  .location-container:hover .location-subtitle {
+    color: #fc8019;
+   
+  }
+  
+  .location-container:hover .location-title:after {
+    background: #fc8019;
+  }
+  .location-title, .location-container {
+    position: relative;
+  }
+  
+  
+  
+  
+  .logo {
+    width: 50px; /* Set your preferred logo width */
+    height: 100px;
+  }
+  
+  .nav-items {
+    display: inline-block;
+    float: right;
+  }
+  
+  .nav-items ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .nav-items ul li {
+    display: inline;
+    margin-right: 20px; 
+    font-size: 18px;
+    list-style: none;
+    margin: 0 10px;
+    padding: 0px 25px;
+  }
+  
+  .nav-items ul li:last-child {
+    margin-right: 0; /* Remove margin for the last navigation item */
+  }
+  
+  .login {
+    background-color: #fc8019; /* Set your preferred button background color */
+    color: #fff; /* Set your preferred button text color */
+    border: none;
+    padding: 10px 20px; /* Set your preferred button padding */
+    cursor: pointer;
+    border-radius: 5px; /* Add some border-radius for the button */
+  }
+  
+  /* Style other elements as needed */
+  
+  
+  .filter {
+    display: flex;
+    justify-content: flex-start;
+  }
+  .card {
+    width: 18%;
+    margin: 15px 14px;
+    padding: 15px;
+    position: relative;
+    box-shadow: 0 0px 2px #0003;
+    transition: transform 0.3s;
+  }
+  
+  .card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 2);
+    transform: scale(1.05);
+    z-index: 1;
+  }
+  
+  .cardImg {
+    width: 100%;
+    height: 186px;
+    object-fit: cover;
+  }
+  
+  .res-container > .res-body {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  
+  
+  
+  /* .card {
+    position: relative;
+    transition: transform 0.3s;
+  } */
+  
+  /* Footer.css */
+  
+  .app-footer {
+    background-color: #000;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+  }
+  
+  .footer-content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .footer-section {
+    flex: 1;
+    text-align: left;
+    max-width: 300px;
+  }
+  
+  .footer-section h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .footer-section a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 5px;
+    transition: color 0.3s; /* Add a smooth transition for links */
+  }
+  
+  .footer-section a:hover {
+    color: #f7b731; /* Change link color on hover */
+  }
+  
+  .app-store-icons {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    margin-top: 10px;
+  }
+  
+  .app-store-icons img {
+    height: 50px;
+    transition: transform 0.3s; /* Add a transform transition for the icons */
+  }
+  
+  .app-store-icons img:hover {
+    transform: scale(1.2); /* Scale up icons on hover */
+  }
+  
+  .copyright {
+    font-size: 14px;
+    margin-top: 20px;
+  }
+  
+  /* Customize other styles as needed */
+  
+  .res-header {
+    text-align: left;
+    border-bottom: 1px solid gray;
+    margin-top: 29px;
+    margin-bottom: 21px;
+    padding-bottom: 19px;
+    font-size: 26px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .shimmerContainer {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 20px auto;
+    padding: 10px;
+    display: flex;
+  }
+  .shimmer-card {
+    width: 18%;
+    height: 280px;
+    background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+    background-size: 200% 100%;
+    animation: shimmer 1.5s infinite linear;
+    margin: 15px 11px;
+  }
+  @keyframes shimmer {
+    0% {
+      background-position: -200% 0;
+    }
+    100% {
+      background-position: 200% 0;
+    }
+  }
+  .login {
+    padding: 5px;
+    background-color: beige;
+  }
+  h4,
+  h5 {
+    margin: 0;
+    padding: 5px 0;
+    font-size: 12px;
+  }
+  h5 {
+    font-weight: normal;
+  }
+  
+  .btn {
+    color: #ff5733;
+    cursor: pointer;
+    text-align: center;
+    background-color: #0000;
+    border: 2px solid #ff5733;
+    align-self: center;
+    margin-left: 8px;
+    padding: 7px;
+    text-decoration: none;
+    display: flex;
+  }
+  .btn:hover {
+    background-color: #ff5733; /* Change background color on hover */
+    color: #ffffff; /* Change text color on hover */
+  }
+  
+  span.rating {
+    background-color: rgb(0, 101, 0);
+    color: white;
+    padding: 5px 11px;
+  }
+  h4.restraTitle {
+    font-size: 16px;
+    height: 50px;
+  }
+  span.rating1 {
+    background-color: rgb(188, 26, 26);
+    color: white;
+    padding: 5px 11px;
+  }
+  
+  .Search {
+    padding: 18px 0px;
+    text-align: center;
+  }
+  .Search input[type="text"] {
+    padding: 12px;
+    width: 50%;
+  }
+  
+  .Search .example input[type="text"] {
+    padding: 10px;
+    font-size: 17px;
+    border: 1px solid grey;
+    float: left;
+    width: 80%;
+    background: #ffffff;
+  }
+  
+  .Search .example button {
+    float: left;
+    width: 20%;
+    padding: 10px;
+    background: #ff5733;
+    color: white;
+    font-size: 17px;
+    border: 1px solid grey;
+    border-left: none;
+    cursor: pointer;
+  }
+  
+  .Search .example button:hover {
+    background: #e2320a;
+  }
+  
+  .Search .example::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  .example {
+    margin: auto;
+    max-width: 500px;
+  }
+  
+  /******** Header CSS ********************************/
+  /* Reset some default styling */
+  body,
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Style the header */
+  .header {
+    color: #fff;
+    z-index: 1000;
+    will-change: transform;
+    /* contain: size layout style; */
+    /* background: #fff; */
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    padding: 0 20px;
+    transition: transform .3s;
+    display: flex;
+    /* position: fixed; */
+    top: 0;
+    left: 0;
+    right: 0;
+    transform: translateZ(0);
+    box-shadow: 0 15px 40px -20px #282c3f26;
+  }
+  
+  /* Style the logo */
+  .logo {
+    /* width: 100px; */
+    height: 50px;
+  }
+  
+  
+  .nav-items li {
+    margin-right: 20px; /* Adjust the spacing as needed */
+  }
+  
+  /* Style the navigation links */
+  .nav-items a {
+    color: #080808;
+    text-decoration: none;
+    transition: color .3s;
+    font-weight: bold;
+  }
+  
+  .nav-items a:hover {
+    color: #ff5733; /* Change link color on hover to your preference */
+  }
+  
+  /* Style the login button */
+  .login {
+    background-color: #ff5733; /* Change button background color to your preference */
+    color: #fff; /* Change button text color to your preference */
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px; /* Add rounded corners to the button */
+    cursor: pointer;
+  }
+  
+  .login:hover {
+    background-color: #ff834f; /* Change button background color on hover to your preference */
+  }
+  
+  /******************************** About Us CSS ********************************/
+  
+  /* About Us Container */
+  .about-us-container {
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  /* Heading Styles */
+  .about-us-container h1 {
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  /* Paragraph Styles */
+  .about-us-container p {
+    font-size: 18px;
+    line-height: 1.5;
+    color: #666;
+    margin-bottom: 20px;
+  }
+  
+  /******************************** Contact Us page ********************************/
+  
+  /* Page container */
+  .food-delivery-page {
+    font-family: Arial, sans-serif;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  /* Header */
+  .food-delivery-page .header {
+    text-align: center;
+  }
+  
+  /* Restaurant Card */
+  .food-delivery-page .restaurant-card {
+    display: flex;
+    margin: 20px 0;
+  }
+  
+  .food-delivery-page .restaurant-image {
+    width: 200px;
+    height: 150px;
+  
+    border: 1px solid #ddd;
+    object-fit: scale-down;
+  }
+  
+  .food-delivery-page .restaurant-details {
+    margin-left: 20px;
+  }
+  
+  /* Restaurant Menu */
+  .food-delivery-page .restaurant-menu {
+    background-color: #f5f5f5;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 20px 0;
+  }
+  
+  .food-delivery-page .restaurant-menu h3 {
+    font-weight: bold;
+  }
+  
+  .food-delivery-page .restaurant-menu ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .food-delivery-page .restaurant-menu li {
+    padding: 5px 0;
+  }
+  
+  /* Order Button */
+  .food-delivery-page .order-button {
+    text-align: center;
+    margin: 20px 0;
+  }
+  
+  .food-delivery-page button {
+    background-color: #ff5733;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .food-delivery-page button:hover {
+    background-color: #ff834f;
+  }
+  
+  /* Footer */
+  .food-delivery-page .footer {
+    text-align: center;
+    color: #777;
+    padding: 20px 0;
+  }
+  
+  /******************************** Error Page ********************************/
+  
+  /* Error Page Container */
+  .error-page {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f5f5f5;
+  }
+  
+  /* Error Content */
+  .error-page .error-content {
+    text-align: center;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Error Heading */
+  .error-page h1 {
+    color: #ff5733;
+    font-size: 36px;
+  }
+  
+  /* Error Message */
+  .error-page p {
+    margin: 10px 0;
+    font-size: 18px;
+  }
+  
+  /* Error Message Link */
+  .error-page a {
+    text-decoration: none;
+    color: #ff5733;
+    font-weight: bold;
+  }
+  
+  .error-page a:hover {
+    text-decoration: underline;
+  }
+  
+  /******************************** restaurant menu page ********************************/
+  /* Styles for the overall restaurant page */
+  
+  /* Styles for the overall restaurant page */
+  .restaurant-page {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: center;
+    margin: 20px;
+  }
+  
+  /* Styles for the restaurant info section */
+  /* .restaurant-page .restaurant-info {
+    display: flex;
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    width: 100%;
+  } */
+  
+  /* .restaurant-page .restaurant-image {
+    flex: 1;
+  
+    max-height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-right: 20px;
+  } */
+  
+  .restaurant-page .restaurant-details {
+    flex: 2;
+    text-align: left;
+  }
+  
+  /* Rest of the CSS for restaurant details and menu stays the same */
+  
+  /* .restaurant-page .restaurant-name {
+    font-size: 24px;
+    margin: 10px 0;
+  } */
+  
+  /* .restaurant-page .restaurant-rating,
+  .restaurant-page .restaurant-ratings,
+  .restaurant-page .restaurant-delivery-time,
+  .restaurant-page .restaurant-cuisines,
+  .restaurant-page .restaurant-cost,
+  .restaurant-page .restaurant-address,
+  .restaurant-page .restaurant-phone,
+  .restaurant-page .restaurant-hours {
+    font-size: 16px;
+    margin: 10px 0;
+  } */
+  
+  /* Styles for the restaurant menu section */
+  .restaurant-page .restaurant-menu {
+    background-color: #fff;
+    /* border: 1px solid #e0e0e0; */
+    border-radius: 8px;
+    width: 100%;
+  }
+  
+  /* .restaurant-image img {
+    height: 230px;
+  } */
+  .restaurant-page .menu-heading {
+    font-size: 20px;
+    margin: 10px 0;
+  }
+  
+  .restaurant-page .menu-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .restaurant-page .menu-item {
+    border-bottom: 1px solid #e0e0e0;
+    margin: 2px 0;
+    padding: 8px 0px 11px 0px;
+    display: flex;
+    overflow: hidden;
+  }
+  
+  .restaurant-page .menu-item-image {
+    object-fit: cover;
+    border-radius: 8px 0 0 8px;
+    height: 90px;
+  }
+  
+  .restaurant-page .menu-item-details {
+    flex: 1;
+    text-align: left;
+    margin-left: 11px;
+  }
+  .strikethrough {
+    color: gray;
+    font-weight: normal;
+    text-decoration: line-through;
+    margin-right: 7px;
+    font-size: 12px;
+  }
+  .menu-item-count {
+    width: 124px;
+  }
+  .restaurant-page .item-name {
+    margin: 8px 0;
+    font-size: 18px;
+  }
+  
+  .restaurant-page .item-description {
+    margin: 8px 0;
+    font-size: 14px;
+    color: gray;
+  }
+  
+  .menu-item-details p {
+    margin: 0;
+  }
+  
+  .restaurant-page .item-price {
+    color: #ff5733;
+    margin: 10px 0;
+    font-size: 16px;
+    font-weight: 900;
+  }
+  /********************************************************/
+  .orderNow-button {
+    text-align: center;
+    margin: 13px 0px;
+  }
+  .orderNow-button button {
+    color: #fff;
+    cursor: pointer;
+    background-color: #fc6730;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 18px;
+  }
+  .card a {
+    text-decoration: none;
+    color: black;
+  }
+  /*************************Back Button*******************************/
+  
+  .previous {
+    color: #fff;
+    background-color: #ff5733;
+    padding: 11px 48px;
+    text-decoration: none;
+    display: inline-block;
+    margin-bottom: 15px;
+  }
+  
+  .previous:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  /* Styles for the AboutUs component */
+  .AboutUs {
+    max-width: 1320px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+  
+  .AboutUsContent {
+    width: 40%;
+  }
+  
+  .AboutUsTitle {
+    color: #013220;
+    font-weight: bold;
+    font-size: 2rem;
+  }
+  
+  .AboutUsSubtitle {
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin-top: 1rem;
+  }
+  
+  .AboutUsDescription {
+    font-weight: normal;
+    font-size: 1rem;
+    margin-bottom: 1.25rem;
+    color: hwb(58 4% 65%)
+  }
+  
+  .AboutUsImage {
+    max-width: 100%;
+    height: auto;
+    margin-left: 6%;
+    border-radius: 0.75rem;
+  }
+  
+  @media (min-width: 768px) {
+    .AboutUs {
+      flex-direction: row;
+    }
+  }
+  
+  /*****Toggle Button ********************************/
+  
+  .toggle-buttons {
+    display: flex;
+    border: 2px solid #ccc;
+  
+    overflow: hidden;
+    max-width: 220px;
+    background-color: #f3f3f3;
+  }
+  
+  .toggle-button {
+    flex: 1;
+    padding: 10px 0;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    background-color: #fff;
+    color: #333;
+    font-weight: 600;
+  }
+  
+  .toggle-button:hover {
+    background-color: #333;
+    color: #fff;
+  }
+  
+  .selected {
+    background-color: #ff5733;
+    color: #fff;
+    font-weight: 700;
+  }
+  
+  /* Individual button styling */
+  .veg-nonveg-image{
+    height: 14px;
+    margin-top: 9px;
+  }
+  /******** Add Button ********************************/
+  
+  .button-counter {
+    text-align: center;
+    margin: -34px 8px;
+    position: absolute;
+  }
+  
+  .button-counter button {
+    color: #000;
+    cursor: pointer;
+    background-color: #ffffff;
+    border: none;
+    padding: 7px 40px;
+    font-size: 13px;
+    font-weight: bolder;
+    transition: background-color .3s;
+  }
+   
+  
+  .button-counter button:hover {
+    box-shadow: 2px 1px 6px 2px lightgray;
+  }
+  
+   
+  
+  .button-counter .counter {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    background: white;
+  }
+  
+   
+  .button-counter .counter button {
+    color: #000;
+    cursor: pointer;
+    background-color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    margin: 0 10px;
+    padding: 3px 10px;
+    font-size: 18px;
+    transition: background-color .3s;
+  }
+  
+   
+  
+  /* .button-counter .counter button:hover {
+    background-color: #005a98;
+  } */
+  
+   
+  .button-counter .counter span {
+    font-size: 14px;
+    font-weight: 900;
+  }
+  
+  /********** Sidebar****************/
+  
+  /* CartSidebar.css */
+  
+  .cart-sidebar {
+   
+    top: 0;
+    right: -300px; /* Off-screen initially */
+    width: 300px;
+    height: 100%;
+    background-color: #fff;
+    box-shadow: -1px 0 5px rgba(0, 0, 0, 0.2);
+    overflow-y: auto;
+    transition: right 0.3s;
+  }
+  
+  .cart-header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  
+  
+  /*********************************************/
+  
+  /* RestaurantPage.css */
+  
+  .restaurant-page {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    display: flex;
+    width: 1000px;
+    margin: 0 auto;
+  }
+  
+  .restaurant-info {
+    width: 100%;
+    background-color: #f2f2f2;
+    padding: 20px;
+  }
+  
+  .content-wrapper {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+  }
+  
+  .restaurant-menu {
+    width: 60%;
+  }
+  
+  .menu-heading {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  
+  toggle-buttons {
+    display: flex;
+  }
+  
+  /* .toggle-button {
+    margin-right: 10px;
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  } */
+  
+  .selected {
+    background-color: #0056b3;
+  }
+  
+  .menu-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  /* .menu-item {
+    display: flex;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    padding: 10px;
+  } */
+  
+  .item-image {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    margin-right: 10px;
+  }
+  
+  .item-details {
+    flex: 1;
+  }
+  
+  .item-name {
+    font-size: 18px;
+    margin-bottom: 5px;
+  }
+  
+  item-description {
+    color: #666;
+    margin-bottom: 5px;
+  }
+  
+  item-price {
+    font-weight: bold;
+  }
+  
+  /* Cart Sidebar Styles */
+  
+  .cart-sidebar {
+    width: 40%;
+    background-color: #f2f2f2;
+    padding: 20px;
+  }
+  
+  .cart-header {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .close-button {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  
+  .cart-items {
+    margin-top: 20px;
+  }
+  
+  /* RestaurantPage.css */
+  
+  /* Other styles you might already have */
+  
+  .cart-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  .cart-table th,
+  .cart-table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+  }
+  
+  .cart-table th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+  }
+  
+  .cart-table tr:hover {
+    background-color: #f5f5f5;
+  }
+  
+  span.allDescription {
+    text-align: center;
+    justify-content: space-between;
+    margin-top: 8px;
+    display: flex;
+  }
+  
+  .allDescription p {
+    color: #353535;
+    margin-top: 10px;
+    padding: 0 2px;
+    font-size: 11px;
+    font-weight: bolder;
+  }
+  /**************************** Home page crousal ****************************/
+  .image-scroll-container {
+    display: flex;
+    overflow-x: auto;
+    justify-content: space-between;
+  }
+  
+  .image-scroll-container .image-item {
+    flex-shrink: 0;
+    margin: 1rem;
+    transition: transform 0.3s, opacity 0.3s;
+    /* position: relative; */
+  }
+  .image-scroll-container .image-item:hover {
+    transform: scale(1.05);
+    opacity: 0.7;
+    z-index: 1;
+    cursor: pointer;
+  }
+  .image-scroll-container .image-item a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  .image-scroll-container .image-item img {
+    width: 144px;
+    height: 180px;
+  }
+  
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  .image-scroll-container::-webkit-scrollbar {
+    display: none;
+  }
+  
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .image-scroll-container {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+  }
+  /*---------------- Home page top slider --------------------/
+  
+  
+  
+  /* CSS classes to style the image row and items */
+  .image-row-container {
+    display: flex;
+    overflow-x: auto;
+    padding: 10px; /* Add some padding if needed */
+    justify-content: space-between;
+  }
+  
+  .image-row-container .image-item {
+    flex-shrink: 0;
+    margin-right: 20px; /* Add margin to separate images */
+    /* position: relative; */
+    transition: transform 0.3s, opacity 0.3s;
+  }
+  
+  .image-row-container .image-item:hover {
+    transform: scale(1.05);
+    opacity: 0.7;
+    z-index: 1;
+    cursor: pointer;
+  }
+  
+  .image-row-container .image-item a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  .image-row-container .image-item img {
+    width: 425px;
+    height: 252px;
+    object-fit: cover; /* Maintain aspect ratio and cover container */
+  }
+  
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  .image-row-container::-webkit-scrollbar {
+    display: none;
+  }
+  
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .image-row-container {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+  }
+  
+  /* Optional: Add hover effect or other custom styles */
+  
+  /* App.css (or your preferred stylesheet) */
+  
+  .accordion-item {
+    border-bottom: 13px solid #e9e9e9;
+    /* margin: 10px; */
+  }
+  
+  /* .accordion-button {
+    background-color: #f7f7f7;
+    border: none;
+    padding: 10px;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+    font-weight: bold;
+  } */
+  
+  /* .accordion-content {
+  
+    background-color: #fff;
+    padding: 10px;
+    border-top: 1px solid #ddd;
+  } */
+  
+  .accordion-content.active {
+    display: block;
+  }
+  
+  .accordion-button {
+    cursor: pointer;
+    background-color: #ffffff;
+    border: 1px solid #ffffff;
+    border-radius: 5px;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    font-size: 17px;
+    font-weight: bold;
+  }
+  
+  .accordion-button span {
+    font-size: 30px;
+  }
+  
+  /* Adjust styles as needed */
+  
+  
+  /* ================================================================= Restaurant detail page */
+  .restaurant-container {
+    background-color: #fff;
+    border: 0px solid #e5e5e5;
+    border-radius: 5px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    /* box-shadow: 0 2px 4px #0000001a; */
+  }
+  
+  .restaurant-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+  
+  .restaurant-details {
+    flex: 1;
+  }
+  
+  .restaurant-name {
+    font-size: 22px;
+    font-weight: bold;
+    margin: 0;
+  }
+  
+  .restaurant-cuisines {
+    color: #666;
+    font-size: 14px;
+  }
+  
+  .restaurant-location {
+    text-align: right;
+    font-size: 14px;
+  }
+  
+  .restaurant-area {
+    /* margin: 0px; */
+    font-size: 14px;
+    color: rgb(102, 102, 102);
+  }
+  
+  .restaurant-distance {
+    color: #666;
+  }
+  
+  .restaurant-ratings-box {
+    background-color: #f4f4f4;
+    border: 1px solid #e9e9eb;
+    box-shadow: 0 1px 5px #f9f9f9;
+    border-radius: 6px;
+    text-align: center;
+    padding: 10px;
+    font-weight: 700;
+  }
+  
+  .restaurant-rating {
+    font-size: 28px; /* Increase the font size for emphasis */
+    color: #3d9b6d;
+    margin-bottom: 5px;
+  }
+  
+  .dotted-separator {
+    border: none;
+    border-top: 1px dotted #ccc;
+    margin: 20px 0;
+  }
+  
+  .restaurant-total-ratings {
+    color: #666;
+    font-weight: bold;
+  }
+  
+  .restaurant-message-icon {
+    width: 18px;
+    height: 18px;
+    vertical-align: middle;
+    margin-right: 5px;
+  }
+  
+  .restaurant-message-text {
+    color: #666;
+    vertical-align: middle;
+    display: inline-block;
+    font-size: 14px;
+  }
+  
+  .restaurant-image img {
+    height: 130px;
+    margin-right: 27px;
+    object-fit: cover;
+  }
+  .restaurant-time-cost {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+  }
+  
+  /* .time-icon,
+  .cost-icon {
+    display: flex;
+    align-items: center;
+  }
+  
+  .time-icon svg,
+  .cost-icon svg {
+    width: 18px;
+    height: 18px;
+    margin-right: 5px;
+  }
+  
+  .cost-icon {
+    color: #666;
+  } */
+  
+  
+  .deliveryImg img {
+    margin-bottom: -2px;
+    margin-right: 4px;
+  }
+  .time-icon span {
+    margin-right: 12px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #747474;
+  }
+  
+  span.bestseller {
+    display: inline-block;
+    line-height: 1.15rem;
+    font-size: 14px;
+    color: #ee9c00;
+    font-weight: bold;
+    text-transform: capitalize;
+    margin-left: 6px;
+  }
+  
+  /**************** Cart Bottom ********************************/
+  /* 
+  .menu-sticky-bottom {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .view-cart-button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px;
+    width: 100%;
+  }
+  
+  .cart-details-title {
+    font-weight: bold;
+  }
+  
+  .cart-details-subtitle {
+    color: #666;
+  }
+  
+  .view-cart {
+    display: flex;
+    align-items: center;
+  }
+  
+  .view-cart-icon {
+    margin-left: 10px;
+  } */
+  
+  
+  /* App.css */
+  
+  .appBox {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+  }
+  
+  .appBox .box {
+    border: 1px solid #ccc;
+    padding: 10px;
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .appBox .box-content {
+    width: 100%;
+    text-align: center;
+  }
+  
+  .appBox .button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .appBox button {
+    margin: 5px;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: background-color 0.2s;
+  }
+  
+  .appBox button:hover {
+    background-color: #0056b3;
+  }
+  
+  .appBox h2 {
+    margin-bottom: 10px;
+  }
+  
+  .appBox input[type="checkbox"] {
+    margin-right: 5px;
+  }
+  
+  /** Login */
+  
+  /* Login.css */
+  
+  .login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f7f7f7;
+  }
+  
+  .login-container .login-form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    text-align: center;
+  }
+  
+  .login-container h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .login-container label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .login-container input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+  }
+  
+  .login-container button {
+    background-color: #fc8019;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  .login-container button:hover {
+    background-color: #c64913;
+  }
+  
+  
+  /* ================================================================= cart page =================================================================/
+  
+  /* CartPage.css */
+  .cart-page {
+    background-color: #f7f7f7;
+    justify-content: space-between;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    display: flex;
+    width: 1100px;
+    margin: 0 auto;
+  }
+  
+  .cart-page .left-block {
+    flex: 8;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* .cart-page .cart-items {
+  
+    margin: -10px; 
+  }
+  
+  .cart-page .cart-item {
+    padding: 10px;
+    display: flex;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    margin: 10px; 
+  } */
+  
+  .cart-page .item-image {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 5px;
+  }
+  
+  .cart-page .item-info {
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+  }
+  
+  .cart-page .item-quantity {
+    display: flex;
+    align-items: center;
+  }
+  
+  .cart-page .item-quantity button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 0 5px;
+  }
+  
+  .cart-page .right-block {
+    flex: 4;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .cart-page .restaurant-image {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid #007BFF;
+  }
+  
+  .cart-page .restaurant-name {
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .cart-page .order-summary {
+    margin-top: 20px;
+  }
+  
+  .cart-page .total-price, .gst-price, .delivery-charge, .grand-total {
+    margin: 10px 0;
+    font-size: 16px;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .cart-page .checkout-button {
+    color: #fff;
+    cursor: pointer;
+    background-color: #fc8019;
+    border: none;
+    border-radius: 5px;
+    padding: 15px 30px;
+    font-size: 18px;
+    width: 100%;
+    margin-top: 46px;
+  }
+  
+  ._10-lm {
+    height: calc(100vh - 80px);
+    width: 100%;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-pack: center;
+    margin: 0 auto;
+    text-align: center;
+    background: #fff;
+  }
+  ._3a391 {
+    width: 271px;
+    height: 256px;
+    background-image: url("https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/2xempty_cart_yfxml0");
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0 auto;
+  }
+  ._3Y9ZP {
+    margin-top: 24px;
+    font-size: 20px;
+    font-weight: 600;
+    color: #535665;
+  }
+  .d7jCU {
+    margin-top: 8px;
+    color: #7e808c;
+  }
+  ._3pgCg {
+      margin-top: 30px;
+      padding: 11px 20px;
+      text-transform: uppercase;
+      background-color: #fc8019;
+      color: #fff;
+      font-weight: 600;
+      cursor: pointer;
+      border: 0;
+      outline: 0;
+      font-size: 15px;
+      text-align: center;
+      -ms-transform: translateY(0);
+      transform: translateY(0);
+      transition: transform .8s cubic-bezier(.2,1,.2,1);
+  
+  }
+  
+  .cart-count {
+    color: #fff;
+    background-color: #fc8019;
+    border-radius: 24px;
+    padding: 2px 7px;
+    font-size: 16px;
+    position: relative;
+    top: -13px;
+    right: 4px;
+  }
+  i.fa.fa-shopping-cart {
+    font-size: 22px;
+  }
+  ._3pgCg a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  
+  .order-summary {
+    text-align: center;
+    background-color: #f5f5f5;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    width: 400px;
+    float: right;
+  }
+  
+  /* Style for each paragraph (total price, GST, etc.) */
+  .order-summary p {
+    margin: 0;
+    font-size: 16px;
+    padding: 5px 0;
+  }
+  
+  /* CSS for the button container */
+  .button-container {
+    height: 3rem;
+    font-size: 1rem;
+    font-weight: 600;
+    margin-top: 2.5rem;
+    display: flex;
+  }
+  
+  /* CSS for the "Go Back" button */
+  .button-container button:nth-child(1) {
+    cursor: pointer;
+    color: #206e08;
+    font-weight: bold;
+    border: 2px solid #60b246;
+    flex-grow: 1;
+    text-transform: uppercase;
+  }
+  
+  /* CSS for the space between buttons */
+  .button-container span {
+    width: 0.5rem;
+  }
+  
+  /* CSS for the "Confirm Order" button */
+  .button-container button:nth-child(3) {
+    cursor: pointer;
+    color: white;
+    font-weight: bold;
+    background-color: #60b246;
+    flex-grow: 1;
+    text-transform: uppercase;
+  }
+  
+  .button-container button:nth-child(3):hover {
+    background-color: #206e08; 
+  }
+  
+  
+  /* Styling for the Checkout button */
+  .checkout-button {
+    background-color: #0077cc;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .checkout-button:hover {
+    background-color: #0055aa;
+  }
+  p.grand-total {
+    font-size: 26px;
+    border-top: 4px solid gray;
+    margin-top: 12px;
+  }
+  
+  
+  /* Style the cart items table */
+  .cart-items {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+  }
+  
+  /* Style table header row */
+  .cart-items thead {
+    background-color: #60b246;
+    color: #fff;
+  }
+  
+  .cart-items th, .cart-items td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  /* Style even and odd rows for better readability */
+  .cart-items tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  /* Style the item image */
+  .cart-items .item-image {
+    max-width: 50px;
+    max-height: 50px;
+    margin-right: 10px;
+    vertical-align: middle;
+  }
+  
+  /* Center align the text in the "Quantity," "Price (₹)," and "Total (₹)" columns */
+  /* .cart-items td:nth-child(2), .cart-items td:nth-child(3), .cart-items td:nth-child(4) {
+    text-align: center;
+  } */
+  
+  /* Style the currency symbol */
+  /* .cart-items td:nth-child(3)::before,
+  .cart-items td:nth-child(4)::before {
+    content: "₹";
+  } */
+  
+  /* Add some spacing to the rows */
+  .cart-items tr {
+    margin: 10px 0;
+  }
+  
+  /* Add a border around the table */
+  .cart-items {
+    border: 1px solid #ddd;
+  }
+  
+  /* Hover effect on rows */
+  .cart-items tbody tr:hover {
+    background-color: #ddd;
+  }
+  
+  /* Sidebar*/
+  
+  
+  
+  .sidepanel {
+    z-index: 1;
+    background-color: #f0f0f0;
+    width: 0;
+    height: 250px;
+    padding-top: 60px;
+    transition: all .5s;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+    box-shadow: 2px 7px 15px 6px gray;
+  }
+  
+  .sidepanel a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  .sidepanel a:hover {
+    color: #f1f1f1;
+  }
+  
+  .sidepanel .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+  }
+  
+  .openbtn {
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #111;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+  }
+  
+  .openbtn:hover {
+    background-color: #444;
+  }
+  
+  /* Add styles to open the sidepanel */
+  .sidepanel.open {
+    width: 710px;
+    height: 100vh;
+  }
+  input.search-location {
+    color: #000;
+    border-radius: 5px;
+    width: 100%;
+    padding: 17px;
+    font-size: 16px;
+    border: 0px;
+    box-shadow: 0px 1px 6px 1px gray;
+  }
+  .location-wrapper {
+    width: 85%;
+    margin: 0 auto;
+  }
+  
+  
+  .overlay {
+    z-index: 10000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #282c3f;
+    opacity: .7;
+    overflow: hidden;
+  }
+  
+  .current-location-current {
+    color: #000;
+    margin-top: 20px;
+    padding: 0 12px;
+    display: flex;
+    box-shadow: 0 1px 6px 1px gray;
+  }
+  
+  .current-location {
+    color: #000;
+    margin-top: 0px;
+    padding: 0 12px;
+    display: flex;
+    border-bottom: 1px dashed gray;
+  }
+  .current-location-detail {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+  }
+  .current-location-icon {
+    align-items: center;
+    font-size: 27px;
+    display: flex;
+    width: 25px;
+  }
+  span.current-location-name {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 6px;
+  }
+  
+  .current-location:hover,.current-location-current:hover {
+    background-color: orange;
+    cursor: pointer;
+  }
+  
+  
+  
+  .payment-container {
+    background-color: #f3f4f6;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .payment-container .content {
+    background-color: #fff;
+    padding: 4rem;
+    border-radius: 0.5rem;
+    text-align: center;
+    width: 800px;
+  
+  }
+  
+  .payment-container .icon {
+    font-size: 11rem;
+    color: #48bb78; /* Green color */
+    margin-bottom: 1rem;
+  }
+  
+  .payment-container .heading {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333; /* Grayish text color */
+    margin: 10px 0;
+  }
+  
+  .payment-container .text {
+    font-size: 1rem;
+    color: #666; /* Light gray text color */
+    margin: 10px 0;
+  }
+  
+  .payment-container .order-details {
+    font-size: 1rem;
+    color: #333;
+    margin: 10px 0;
+  }
+  
+  .payment-container .button {
+    width: 233px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .payment-container .btn {
+    color: #fff;
+    background-color: #60b246;
+    border-radius: 4px;
+    padding: 10px 24px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color .2s;
+    text-align: center;
+    display: block;
+  }
+  
+  .payment-container .btn:hover {
+    background-color: #206e08; 
+  }
+  
+  /* Contact us page CSS Start */
+  .contact-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 60px auto 20px;
+    overflow-y: hidden;
+    height: 76vh;
+  }
+  
+  .contact-container .contact-left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .contact-container .contact-left img {
+    width: 300px;
+  }
+  
+  .contact-container .contact-right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: x-large;
+  }
+  
+  .contact-container .contact-right h1 {
+    color: #353535;
+  }
+  
+  .contact-container .contact-right form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .contact-container .contact-right form input {
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+    box-sizing: border-box;
+    box-shadow: 1px 2px 4px 0 rgba(0, 0, 0, 0.08);
+    border: 1px solid #c26100;
+    min-width: 40vw;
+  }
+  
+  .contact-container .contact-right form textarea {
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+    box-sizing: border-box;
+    box-shadow: 1px 2px 4px 0 rgba(0, 0, 0, 0.08);
+    border: 1px solid #c26100;
+    min-width: 40vw;
+  }
+  
+  .contact-container .contact-right form input:focus,
+  .contact-container .contact-right form textarea:focus {
+    outline: 1px outset #d97919;
+  }
+  
+  .contact-container .contact-right form button {
+    padding: 10px 20px;
+    margin: 10px;
+    background-color: #c26100;
+    box-shadow: 1px 2px 4px 0 rgba(0, 0, 0, 0.08);
+    color: #ffffff;
+    font-size: large;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+  }
+  
+  .contact-container .contact-right form button:hover {
+    background-color: #d97919;
+  }
+  
+  
+  /* Help page - Styles for the Section component */
+  .Section {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    border-radius: 0.25rem;
+    padding: 1.5rem;
+    border-bottom: 0.125rem solid;
+    cursor: pointer;
+  }
+  
+  .Section:hover {
+    background-color: #f8f9fa;
+  }
+  
+  .SectionTitle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .SectionTitle h3 {
+    font-size: 1rem;
+    font-weight: bold;
+  }
+  
+  /* Styles for the Help component */
+  .Help {
+    background-color: #edf2f7;
+    width: 60vw;
+    flex-grow: 1;
+    font-family: 'Poppins', sans-serif;
+    margin: 0 auto;
+  }
+  
+  .HelpTitle {
+    padding: 0.625rem;
+    font-weight: bold;
+    font-size: 1.25rem;
+    text-align: center;
+    background-color: #1a202c;
+    color: #ffffff;
+  }
+  
+  /* Additional styles for the Section component when isVisible is true */
+  .SectionDescription {
+    font-size: 0.875rem;
+    font-weight: bold;
+    padding-top: 0.125rem;
+    color: #66788a;
+  }
+  
+  
