@@ -21,7 +21,7 @@ const useRestaurantList = ({ lat, lng }) => {
 
     fetchData();
   }, [lat, lng]); // Include lat and lng in the dependency array
-  console.log(resInfo, 'resInfo')
+  //console.log(resInfo, 'resInfo')
   return resInfo;
 };
 

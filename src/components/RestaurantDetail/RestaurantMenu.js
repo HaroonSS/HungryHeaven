@@ -10,7 +10,7 @@ const RestaurantMenu = () => {
   const { resId } = useParams();
   // Fetch restaurant menu data
   const resInfo = useRestaurantMenu(resId);
-  console.log(resInfo, 'resInfo in RestaurantMenu')
+  //console.log(resInfo, 'resInfo in RestaurantMenu')
   // State to store filtered item cards, filter, and counters for items
   const [itemCardsFiltered, setItemCardsFiltered] = useState([]);
   const [filter, setFilter] = useState("all");

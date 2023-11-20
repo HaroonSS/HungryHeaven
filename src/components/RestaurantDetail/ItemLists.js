@@ -37,7 +37,7 @@ const dispatch = useDispatch();
             <div className="menu-item-details">
               <p>
                 <span>
-                  {console.log(item, 'item in itemLists')/* Display a Veg or Non-Veg icon based on the item's "isVeg" property */}
+                  {/* Display a Veg or Non-Veg icon based on the item's "isVeg" property */}
                   <img
                     className="veg-nonveg-image"
                     src={item.card.info.isVeg ? vegImage : nonVegImage}

@@ -21,7 +21,7 @@ const Body = () => {
   // Local State Variables
 
   const resInfo = useRestaurantList(latlong);
-  console.log(resInfo, "resInfo in Body");
+  //console.log(resInfo, "resInfo in Body");
   const [listOfRestaurants, setListOfRestaurants] = useState([]);
   const [listOfFilteredRestaurants, setListOfFilteredRestaurants] = useState(
     []

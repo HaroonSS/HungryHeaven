@@ -349,7 +349,7 @@
     max-width: 500px;
   }
   
-  /******** Header CSS ********************************/
+  /*-------------------------------- Header CSS */
   /* Reset some default styling */
   body,
   ul {
@@ -415,7 +415,7 @@
     background-color: #ff834f; /* Change button background color on hover to your preference */
   }
   
-  /******************************** About Us CSS ********************************/
+  /*--------------------------------- About Us page*/
   
   /* About Us Container */
   .about-us-container {
@@ -439,7 +439,7 @@
     margin-bottom: 20px;
   }
   
-  /******************************** Contact Us page ********************************/
+  /*--------------------------------- Contact Us page */
   
   /* Page container */
   .food-delivery-page {
@@ -519,7 +519,7 @@
     padding: 20px 0;
   }
   
-  /******************************** Error Page ********************************/
+  /*------------------------------------- Error Page */
   
   /* Error Page Container */
   .error-page {
@@ -564,7 +564,7 @@
     text-decoration: underline;
   }
   
-  /******************************** restaurant menu page ********************************/
+  /*-------------------------------------- restaurant menu page */
   /* Styles for the overall restaurant page */
   
   /* Styles for the overall restaurant page */
@@ -708,7 +708,7 @@
     text-decoration: none;
     color: black;
   }
-  /*************************Back Button*******************************/
+  /*------------------------------ Back Button*/
   
   .previous {
     color: #fff;
@@ -770,7 +770,7 @@
     }
   }
   
-  /*****Toggle Button ********************************/
+  /*----------------------------Toggle Button */
   
   .toggle-buttons {
     display: flex;
@@ -808,7 +808,7 @@
     height: 14px;
     margin-top: 9px;
   }
-  /******** Add Button ********************************/
+  /*---------------------------- Add Button */
   
   .button-counter {
     text-align: center;
@@ -866,7 +866,7 @@
     font-weight: 900;
   }
   
-  /********** Sidebar****************/
+  /*---------------------------------- Sidebar*/
   
   /* CartSidebar.css */
   
@@ -981,7 +981,7 @@
     font-weight: bold;
   }
   
-  /* Cart Sidebar Styles */
+  /* ------------------------------- Cart Sidebar Styles */
   
   .cart-sidebar {
     width: 40%;
@@ -1045,7 +1045,7 @@
     font-size: 11px;
     font-weight: bolder;
   }
-  /**************************** Home page crousal ****************************/
+  /*-------------------------------- Home page crousal */
   .image-scroll-container {
     display: flex;
     overflow-x: auto;
@@ -1141,22 +1141,6 @@
     /* margin: 10px; */
   }
   
-  /* .accordion-button {
-    background-color: #f7f7f7;
-    border: none;
-    padding: 10px;
-    width: 100%;
-    text-align: left;
-    cursor: pointer;
-    font-weight: bold;
-  } */
-  
-  /* .accordion-content {
-  
-    background-color: #fff;
-    padding: 10px;
-    border-top: 1px solid #ddd;
-  } */
   
   .accordion-content.active {
     display: block;
@@ -1179,11 +1163,8 @@
   .accordion-button span {
     font-size: 30px;
   }
-  
-  /* Adjust styles as needed */
-  
-  
-  /* ================================================================= Restaurant detail page */
+    
+  /* -----------------------------------Restaurant detail page */
   .restaurant-container {
     background-color: #fff;
     border: 0px solid #e5e5e5;
@@ -1281,24 +1262,7 @@
     justify-content: space-between;
     margin-top: 10px;
   }
-  
-  /* .time-icon,
-  .cost-icon {
-    display: flex;
-    align-items: center;
-  }
-  
-  .time-icon svg,
-  .cost-icon svg {
-    width: 18px;
-    height: 18px;
-    margin-right: 5px;
-  }
-  
-  .cost-icon {
-    color: #666;
-  } */
-  
+    
   
   .deliveryImg img {
     margin-bottom: -2px;
@@ -1321,44 +1285,8 @@
     margin-left: 6px;
   }
   
-  /**************** Cart Bottom ********************************/
-  /* 
-  .menu-sticky-bottom {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background-color: #fff;
-    box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.1);
-  }
   
-  .view-cart-button {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 24px;
-    width: 100%;
-  }
-  
-  .cart-details-title {
-    font-weight: bold;
-  }
-  
-  .cart-details-subtitle {
-    color: #666;
-  }
-  
-  .view-cart {
-    display: flex;
-    align-items: center;
-  }
-  
-  .view-cart-icon {
-    margin-left: 10px;
-  } */
-  
-  
-  /* App.css */
+  /*---------------------------- styles for App */
   
   .appBox {
     display: flex;
@@ -1411,9 +1339,7 @@
     margin-right: 5px;
   }
   
-  /** Login */
-  
-  /* Login.css */
+  /* -------------------------------------styles for Login page */
   
   .login-container {
     display: flex;
@@ -1466,10 +1392,8 @@
     background-color: #c64913;
   }
   
-  
-  /* ================================================================= cart page =================================================================/
-  
-  /* CartPage.css */
+    
+  /* --------------------------------styles for Cart Page */
   .cart-page {
     background-color: #f7f7f7;
     justify-content: space-between;
@@ -1781,9 +1705,7 @@
     background-color: #ddd;
   }
   
-  /* Sidebar*/
-  
-  
+  /* --------------------------Styles to Sidebar*/
   
   .sidepanel {
     z-index: 1;
@@ -1832,7 +1754,7 @@
     background-color: #444;
   }
   
-  /* Add styles to open the sidepanel */
+  /* -------------------------Add styles to open the sidepanel */
   .sidepanel.open {
     width: 710px;
     height: 100vh;
@@ -1968,7 +1890,7 @@
     background-color: #206e08; 
   }
   
-  /* Contact us page CSS Start */
+  /* ---------------------------Contact us page CSS Start */
   .contact-container {
     display: flex;
     flex-direction: row;
@@ -2051,7 +1973,7 @@
   }
   
   
-  /* Help page - Styles for the Section component */
+  /* ---------------------- Help page - Styles for the Section component */
   .Section {
     display: flex;
     flex-direction: column;

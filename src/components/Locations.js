@@ -88,7 +88,7 @@ const Locations = ({ isOpen, onClose }) => {
         }
       }
     } else {
-      console.log("Geolocation is not supported by your browser.");
+      //console.log("Geolocation is not supported by your browser.");
     }
   };
   
@@ -154,7 +154,6 @@ const Locations = ({ isOpen, onClose }) => {
 
         {locations.map((location, index) => (
           <>
-          console.log(locations)
           <div
             className="current-location"
             key={index}
