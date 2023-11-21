@@ -14,7 +14,7 @@ import RestaurantMenu from "./components/RestaurantDetail/RestaurantMenu";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 import UserContext from "./hooks/UserContext";
 import { Provider } from "react-redux";
-const Help = lazy(() => import("./components/Help")); // lazy used for use bundle
+//const Help = lazy(() => import("./components/Help")); // lazy used for use bundle
 
 import { PersistGate } from "redux-persist/integration/react"; // Import PersistGate
 import { appStore, persistor } from "./store/appStore"; // Import appStore and persistor
@@ -65,7 +65,6 @@ const appRouter = createBrowserRouter([
       },
       {
         path: "/help",
-        element: <Suspense fallback={<h1>Loading</h1>}><Help /></Suspense>,
         element: <Help />,
       },
       {

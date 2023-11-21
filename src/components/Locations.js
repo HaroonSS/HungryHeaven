@@ -153,7 +153,6 @@ const Locations = ({ isOpen, onClose }) => {
         </div>
 
         {locations.map((location, index) => (
-          <>
           <div
             className="current-location"
             key={index}
@@ -171,7 +170,6 @@ const Locations = ({ isOpen, onClose }) => {
               </span>
             </div>
           </div>
-          </>
         ))}
       </div>
     </div>
