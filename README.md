@@ -44,7 +44,7 @@ To set up and run the project locally:
 
 ## Live Demo 🚀
 
-**Live Preview:** <a href="https://hungry-heaven.vercel.app/" target="_blank"> HungryHeaven- A food ordering Web App</a>
+**Live Preview:** [HungryHeaven- A food ordering Web App](https://hungry-heaven.vercel.app/)
 
 ## Contribution ⭐️
 
