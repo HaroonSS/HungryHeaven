@@ -36,7 +36,7 @@ const RestaurantMenu = () => {
       setItemCardsFiltered(itemCardsData);
     }
   }, []);
-  // console.log(resInfo);
+  console.log(resInfo);
   const categories =
     resInfo?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards?.filter(
       (c) =>
@@ -44,7 +44,7 @@ const RestaurantMenu = () => {
         "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory"
     );
 
-  // console.log("categories", categories);
+  console.log("categories", categories);
   const handleToggle = (newFilter) => {
     setFilter(newFilter);
 
@@ -94,7 +94,7 @@ const RestaurantMenu = () => {
 
   const restaurantData = resInfo.cards[0]?.card?.card?.info;
 
-  // console.log(restaurantData)
+  console.log(restaurantData)
 
   return (
     <>

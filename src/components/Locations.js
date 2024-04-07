@@ -58,7 +58,7 @@ const Locations = ({ isOpen, onClose }) => {
           );
         });
   
-        //console.log("first latlng",position.coords.latitude,position.coords.longitude);
+        console.log("first latlng",position.coords.latitude,position.coords.longitude);
 
         setLatitude(position.coords.latitude);
         setLongitude(position.coords.longitude);
@@ -88,7 +88,7 @@ const Locations = ({ isOpen, onClose }) => {
         }
       }
     } else {
-      //console.log("Geolocation is not supported by your browser.");
+      console.log("Geolocation is not supported by your browser.");
     }
   };
   
@@ -107,7 +107,7 @@ const Locations = ({ isOpen, onClose }) => {
   useEffect(() => {
     if (latitude !== null && longitude !== null) {
       const newLatLng = { lat: latitude, lng: longitude };
-      //console.log("newLatLng",newLatLng);
+      console.log("newLatLng",newLatLng);
       dispatch(clearLatLng());
       dispatch(addLatLng(newLatLng));
     }

@@ -10,7 +10,7 @@ const RestaurantMenu = () => {
   const { resId } = useParams();
   // Fetch restaurant menu data
   const resInfo = useRestaurantMenu(resId);
-  //console.log(resInfo, 'resInfo in RestaurantMenu')
+  console.log(resInfo, 'resInfo in RestaurantMenu')
   // State to store filtered item cards, filter, and counters for items
   const [itemCardsFiltered, setItemCardsFiltered] = useState([]);
   const [filter, setFilter] = useState("all");
@@ -34,7 +34,7 @@ const RestaurantMenu = () => {
   }, [resInfo]);
 
   // Extracting categories from the response
-  const categories = resInfo?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards?.filter(
+  const categories = resInfo?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards?.filter(
     (c) => c?.card?.card["@type"] === "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory"
   );
 
@@ -44,7 +44,7 @@ const RestaurantMenu = () => {
   }
 
   // Extracting restaurant data
-  const restaurantData = resInfo.cards[0]?.card?.card?.info;
+  const restaurantData = resInfo.cards[2]?.card?.card?.info;
 
   return (
     <div className="restaurant-page">

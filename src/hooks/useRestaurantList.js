@@ -8,9 +8,9 @@ const useRestaurantList = ({ lat, lng }) => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        //console.log("fetching data", lat, lng);
+        console.log("fetching data", lat, lng);
         const data = await fetch(RESTRA_LIST_URL + 'lat=' + lat + '&lng=' + lng);
-        //console.log("Fetched restaurant");
+        console.log("Fetched restaurant");
         const json = await data.json();
         setResInfo(json.data);
       } catch (error) {

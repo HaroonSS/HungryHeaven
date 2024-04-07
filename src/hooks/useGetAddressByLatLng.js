@@ -5,24 +5,24 @@ const useGetAddressByLatLng = () => {
   const [resInfo, setResInfo] = useState(null);
 
   const getAddress = async (lat, lng) => {
-    //console.log("address async ", lat,lng)
+    console.log("address async ", lat,lng)
     try {
       const response = await fetch(
         GET_ADDRESS_BY_LAT_LNG + lat + "," + lng,
-        //console.log("response",GET_ADDRESS_BY_LAT_LNG + lat + "," + lng)
+        console.log("response",GET_ADDRESS_BY_LAT_LNG + lat + "," + lng)
       );
       if (!response.ok) {
         throw new Error("Network response was not ok");
       }
       const data = await response.json();
-      //console.log("setResInfo",data )
+      console.log("setResInfo",data )
       setResInfo(data);
     } catch (error) {
       console.error("Error fetching data:", error);
       // Handle errors here
     }
   };
-  // console.log("addressData",resInfo )
+  console.log("addressData",resInfo )
   return { getAddress, resInfo };
 };
 

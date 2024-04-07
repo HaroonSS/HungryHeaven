@@ -3,6 +3,7 @@ import { CDN_URL } from "../utils/constants";
 import { Link } from "react-router-dom";
 
 const RestaurantCard = ({ resData }) => {
+  console.log(resData, 'resData in RestaurantCard')
   if (!resData) {
     return null; // Handle the case where resData is not available
   }
