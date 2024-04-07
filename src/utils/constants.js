@@ -1,18 +1,19 @@
-export const MENU_API = "https://corsproxy.io/?https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=28.5017782&lng=77.18794419999999&restaurantId=";
+export const RESTRA_LIST_URL = "https://hungryheaven-server.onrender.com/api/restaurants?";
 
-export const CDN_URL = "https://corsproxy.io/?https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/";
+export const MENU_API = "https://hungryheaven-server.onrender.com/api/menu?page-type=REGULAR_MENU&complete-menu=true&lat=28.5017782&lng=77.18794419999999&submitAction=ENTER&restaurantId=";
 
-export const RESTRA_LIST_URL = "https://corsproxy.io/?https://www.swiggy.com/dapi/restaurants/list/v5?";
+export const AUTOCOMPLETE_SEARCH_URL = "https://hungryheaven-server.onrender.com/api/autocomplete?input=";
 
-export const RESTRA_CDN_URL = "https://corsproxy.io/?https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/";
+export const AREA_RESTAURANTS_FETCH_URL = "https://hungryheaven-server.onrender.com/api/addressRecommendByName?place_id="
 
-export const RESTRA_DETAIL_PAGE = "https://corsproxy.io/?https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_18,h_18/";
+export const GET_ADDRESS_BY_LAT_LNG = "https://hungryheaven-server.onrender.com/api/addressRecommendByGeoLocation?latlng="
 
-export const AUTOCOMPLETE_SEARCH_URL = "https://corsproxy.io/?https://www.swiggy.com/dapi/misc/place-autocomplete?input=";
+export const CDN_URL = "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/";
 
-export const AREA_RESTAURANTS_FETCH_URL = "https://corsproxy.io/?https://www.swiggy.com/dapi/misc/address-recommend?place_id="
+export const RESTRA_CDN_URL = "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/";
 
-export const GET_ADDRESS_BY_LAT_LNG = "https://corsproxy.io/?https://www.swiggy.com/dapi/misc/address-recommend?latlng="
+export const RESTRA_DETAIL_PAGE = "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_18,h_18/";
+
 
 /* Mock FAQ */
 export const FAQ = [
